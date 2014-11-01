@@ -41,9 +41,9 @@
 <h3>
 <a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h3>
 
-<p>Rendering dense foliage is a challenge for any game engine, mainly due to the high geometric complexity of realistic plant models. This problem is exaggerated for scenes with many visible plants, especially with animated models, in which the raw geometry can quickly overwhelm a GPU's throughput capabilities. Existing techniques such as instancing and geometry amplification can alleviate these problems for individual meshes, but are not sufficient for large scenes, especially with distant models that do not contribute to a large region of the final image. Most game engines employ level-of-detail techniques including rendering distant models with artist-authored lower-detail meshes or billboards. Unfortunately, these techniques are not very convincing, and are especially subject to popping artifacts at transitions between levels of detail.</p>
+<p>Rendering dense foliage is a challenge for any game engine, mainly due to the high geometric complexity of realistic plant models. This problem is exaggerated for scenes with many visible plants, especially with animated models, in which the raw geometry can quickly overwhelm the GPU. Existing techniques such as instancing and geometry amplification can alleviate these problems for individual meshes, but are not sufficient for large scenes, especially with distant models that do not contribute to a large region of the final image. Most game engines employ level-of-detail techniques including rendering distant models with artist-authored low-detail meshes or billboards. Unfortunately, these techniques are not very convincing, and are especially subject to popping artifacts at transitions between levels of detail.</p>
 
-<p>Similar problems exist in the film industry; in 2007, Pixar demonstrated a <a href="http://dl.acm.org/citation.cfm?id=1276476">technique for rendering complex meshes at a distance via stochastic simplification</a>, which works well in a ray-tracing renderer. For this project, I will be experimenting with applying this technique in a game rendering context, to analyze the performance of this and other techniques in dense foliage rendering.</p>
+<p>Similar problems exist in the film industry, where high-quality landscape renderings require fully detailed meshes which can simply exceed the memory capacity of the rendering hardware. In 2007, Pixar demonstrated a <a href="http://dl.acm.org/citation.cfm?id=1276476">technique for rendering complex meshes at a distance via stochastic simplification</a>. For this project, I will be experimenting with applying this technique in a game rendering context, to analyze the performance of this and other techniques in dense foliage rendering.</p>
 
 <h3>
 <a name="challenges" class="anchor" href="#challenges"><span class="octicon octicon-link"></span></a>Challenges</h3>
@@ -55,7 +55,7 @@
 <h3>
 <a name="project-goals" class="anchor" href="#project-goals"><span class="octicon octicon-link"></span></a>Project Goals</h3>
 
-<p>The ideal outcome of this project is a simple engine capable of rendering dense forest or orchard scenes with high-detail, animated plant models, free of popping artifacts, in real-time (60 fps or higher). In order to achieve this, my first goal will be to develop a simple rendering engine for high-detail plant meshes in a simplified lighting environment. The second goal will be to add stochastic simplification to this engine, and analyze its performance in terms of rendering efficiency and quality of images produced. If satisfactory results are achieved, I will expand on the engine, adding more detailed lighting and pushing performance to meet modern game standards. Otherwise, I will examine the issues with stochastic simplification in games as opposed to film rendering, and implement some standard techniques (e.g. billboard plant models) for comparison.</p>
+<p>The ideal outcome of this project is a simple engine capable of rendering dense forest or orchard scenes with high-detail animated plant models, free of popping artifacts, in real-time (60 fps or higher). In order to achieve this, my first goal will be to develop a simple rendering engine for high-detail plant meshes in a simplified lighting environment. The second goal will be to add stochastic simplification to this engine, and analyze its performance in terms of rendering efficiency and quality of images produced. If satisfactory results are achieved, I will expand on the engine, adding more detailed lighting and pushing performance to meet modern game standards. Otherwise, I will examine the issues with stochastic simplification in games as opposed to film rendering, and implement some standard techniques (e.g. billboard plant models) for comparison.</p>
 
 <h3>
 <a name="resources" class="anchor" href="#resources"><span class="octicon octicon-link"></span></a>Resources</h3>
@@ -69,7 +69,7 @@
 <li>
 <strong>Nov 1 - 7:</strong> Develop a simple rendering engine, capable of rendering a full-detail static plant mesh under direct light in real-time.</li>
 <li>
-<strong>Nov 8 - 14:</strong> Extend rendering to include basic shadow maps and animated meshes. Analyze performance on a scene with multiple models.</li>
+<strong>Nov 8 - 14:</strong> Extend rendering to include basic shadow maps and animated meshes. Analyze performance on simple scenes, varying number of models and distance to camera.</li>
 <li>
 <strong>Nov 15 - 21:</strong> Implement stochastic simplification. Tune simplification for a sample mesh, and analyze performance improvements and visual quality at various camera distances.</li>
 <li>
