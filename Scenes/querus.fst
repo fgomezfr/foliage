@@ -1,0 +1,5 @@
+*LODCOUNT 1
+
+*MODEL querus.fmt
+*POSITION 0 0 50
+*ORIENTATION 0 0 0
