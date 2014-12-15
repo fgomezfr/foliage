@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>FsLexYacc</id>
+    <version>6.0.4</version>
+    <authors>Microsoft Research,  The F# Software Foundation</authors>
+    <owners>Microsoft Research,  The F# Software Foundation</owners>
+    <licenseUrl>http://github.com/fsprojects/FsLexYacc/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://fsprojects.github.com/FsLexYacc</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/fsprojects/FsLexYacc/master/docs/files/img/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FsLex/FsYacc lexer/parser generation tools</description>
+    <summary>FsLex/FsYacc lexer/parser generation tools</summary>
+    <releaseNotes>Add profiles 7, 259 to runtime</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>F# fsharp programming fslex fsyacc parser generator</tags>
+    <dependencies>
+      <dependency id="FsLexYacc.Runtime" version="6.0.4" />
+    </dependencies>
+  </metadata>
+</package>
